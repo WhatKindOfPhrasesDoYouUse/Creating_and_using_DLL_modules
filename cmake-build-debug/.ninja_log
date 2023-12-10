@@ -1,0 +1,5 @@
+# ninja log v5
+13	843	7239089317652308	CMakeFiles/lab3.dir/dll/DynamicLib.cpp.obj	7d59a85f82dae6ad
+1	2057	7239089329798140	CMakeFiles/lab3.dir/lib/StaticLib.cpp.obj	3b28efd28761fb1f
+7	2294	7239089332158806	CMakeFiles/lab3.dir/main.cpp.obj	4a3b51a1fb3fd09e
+2294	2443	7239089333637140	lab3.exe	1c6afdb23943e714
