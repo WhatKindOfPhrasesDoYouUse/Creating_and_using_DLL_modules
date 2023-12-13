@@ -1,9 +1,14 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "libdynamic.a"
+			"path" : "libDynamicLib.dll"
+		},
+		{
+			"path" : "libDynamicLib.dll.a"
+		},
+		{
+			"path" : "libDynamicLib.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -25,7 +30,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -37,6 +42,12 @@
 			[
 				{
 					"fragment" : "-g -fdiagnostics-color=always"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "DynamicLib_EXPORTS"
 				}
 			],
 			"language" : "CXX",
@@ -54,9 +65,24 @@
 			]
 		}
 	],
-	"id" : "dynamic::@6890427a1f51a3e7e1df",
-	"name" : "dynamic",
-	"nameOnDisk" : "libdynamic.a",
+	"id" : "DynamicLib::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "DynamicLib",
+	"nameOnDisk" : "libDynamicLib.dll",
 	"paths" : 
 	{
 		"build" : ".",
@@ -93,5 +119,5 @@
 			"sourceGroupIndex" : 1
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "SHARED_LIBRARY"
 }

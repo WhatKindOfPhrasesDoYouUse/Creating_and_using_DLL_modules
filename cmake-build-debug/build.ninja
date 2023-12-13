@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: lab3
+# Project: libs
 # Configurations: Debug
 # =============================================================================
 
@@ -39,120 +39,116 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/mazaf/CLionProjects/lab3/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/mazaf/CLionProjects/libs/cmake-build-debug/
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target static
+# Object build statements for SHARED_LIBRARY target StaticLib
 
 
 #############################################
-# Order-only phony target for static
+# Order-only phony target for StaticLib
 
-build cmake_object_order_depends_target_static: phony || CMakeFiles/static.dir
+build cmake_object_order_depends_target_StaticLib: phony || CMakeFiles/StaticLib.dir
 
-build CMakeFiles/static.dir/lib/StaticLib.cpp.obj: CXX_COMPILER__static_unscanned_Debug C$:/Users/mazaf/CLionProjects/lab3/lib/StaticLib.cpp || cmake_object_order_depends_target_static
-  DEP_FILE = CMakeFiles\static.dir\lib\StaticLib.cpp.obj.d
+build CMakeFiles/StaticLib.dir/lib/StaticLib.cpp.obj: CXX_COMPILER__StaticLib_unscanned_Debug C$:/Users/mazaf/CLionProjects/libs/lib/StaticLib.cpp || cmake_object_order_depends_target_StaticLib
+  DEFINES = -DStaticLib_EXPORTS
+  DEP_FILE = CMakeFiles\StaticLib.dir\lib\StaticLib.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\static.dir
-  OBJECT_FILE_DIR = CMakeFiles\static.dir\lib
+  OBJECT_DIR = CMakeFiles\StaticLib.dir
+  OBJECT_FILE_DIR = CMakeFiles\StaticLib.dir\lib
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target static
+# Link build statements for SHARED_LIBRARY target StaticLib
 
 
 #############################################
-# Link the static library libstatic.a
+# Link the shared library libStaticLib.dll
 
-build libstatic.a: CXX_STATIC_LIBRARY_LINKER__static_Debug CMakeFiles/static.dir/lib/StaticLib.cpp.obj
+build libStaticLib.dll libStaticLib.dll.a: CXX_SHARED_LIBRARY_LINKER__StaticLib_Debug CMakeFiles/StaticLib.dir/lib/StaticLib.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = CMakeFiles\static.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = libstatic.a
-  TARGET_PDB = static.a.dbg
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target dynamic
-
-
-#############################################
-# Order-only phony target for dynamic
-
-build cmake_object_order_depends_target_dynamic: phony || CMakeFiles/dynamic.dir
-
-build CMakeFiles/dynamic.dir/dll/DynamicLib.cpp.obj: CXX_COMPILER__dynamic_unscanned_Debug C$:/Users/mazaf/CLionProjects/lab3/dll/DynamicLib.cpp || cmake_object_order_depends_target_dynamic
-  DEP_FILE = CMakeFiles\dynamic.dir\dll\DynamicLib.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\dynamic.dir
-  OBJECT_FILE_DIR = CMakeFiles\dynamic.dir\dll
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target dynamic
-
-
-#############################################
-# Link the static library libdynamic.a
-
-build libdynamic.a: CXX_STATIC_LIBRARY_LINKER__dynamic_Debug CMakeFiles/dynamic.dir/dll/DynamicLib.cpp.obj
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = CMakeFiles\dynamic.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = libdynamic.a
-  TARGET_PDB = dynamic.a.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target lab3
-
-
-#############################################
-# Order-only phony target for lab3
-
-build cmake_object_order_depends_target_lab3: phony || CMakeFiles/lab3.dir
-
-build CMakeFiles/lab3.dir/main.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/mazaf/CLionProjects/lab3/main.cpp || cmake_object_order_depends_target_lab3
-  DEP_FILE = CMakeFiles\lab3.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.dir
-
-build CMakeFiles/lab3.dir/lib/StaticLib.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/mazaf/CLionProjects/lab3/lib/StaticLib.cpp || cmake_object_order_depends_target_lab3
-  DEP_FILE = CMakeFiles\lab3.dir\lib\StaticLib.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.dir\lib
-
-build CMakeFiles/lab3.dir/dll/DynamicLib.cpp.obj: CXX_COMPILER__lab3_unscanned_Debug C$:/Users/mazaf/CLionProjects/lab3/dll/DynamicLib.cpp || cmake_object_order_depends_target_lab3
-  DEP_FILE = CMakeFiles\lab3.dir\dll\DynamicLib.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.dir\dll
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target lab3
-
-
-#############################################
-# Link the executable lab3.exe
-
-build lab3.exe: CXX_EXECUTABLE_LINKER__lab3_Debug CMakeFiles/lab3.dir/main.cpp.obj CMakeFiles/lab3.dir/lib/StaticLib.cpp.obj CMakeFiles/lab3.dir/dll/DynamicLib.cpp.obj
-  FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\lab3.dir
+  OBJECT_DIR = CMakeFiles\StaticLib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = lab3.exe
-  TARGET_IMPLIB = liblab3.dll.a
-  TARGET_PDB = lab3.exe.dbg
+  RESTAT = 1
+  TARGET_FILE = libStaticLib.dll
+  TARGET_IMPLIB = libStaticLib.dll.a
+  TARGET_PDB = StaticLib.dll.dbg
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target DynamicLib
+
+
+#############################################
+# Order-only phony target for DynamicLib
+
+build cmake_object_order_depends_target_DynamicLib: phony || CMakeFiles/DynamicLib.dir
+
+build CMakeFiles/DynamicLib.dir/dll/DynamicLib.cpp.obj: CXX_COMPILER__DynamicLib_unscanned_Debug C$:/Users/mazaf/CLionProjects/libs/dll/DynamicLib.cpp || cmake_object_order_depends_target_DynamicLib
+  DEFINES = -DDynamicLib_EXPORTS
+  DEP_FILE = CMakeFiles\DynamicLib.dir\dll\DynamicLib.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\DynamicLib.dir
+  OBJECT_FILE_DIR = CMakeFiles\DynamicLib.dir\dll
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target DynamicLib
+
+
+#############################################
+# Link the shared library libDynamicLib.dll
+
+build libDynamicLib.dll libDynamicLib.dll.a: CXX_SHARED_LIBRARY_LINKER__DynamicLib_Debug CMakeFiles/DynamicLib.dir/dll/DynamicLib.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\DynamicLib.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  RESTAT = 1
+  TARGET_FILE = libDynamicLib.dll
+  TARGET_IMPLIB = libDynamicLib.dll.a
+  TARGET_PDB = DynamicLib.dll.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target libs
+
+
+#############################################
+# Order-only phony target for libs
+
+build cmake_object_order_depends_target_libs: phony || cmake_object_order_depends_target_DynamicLib cmake_object_order_depends_target_StaticLib
+
+build CMakeFiles/libs.dir/main.cpp.obj: CXX_COMPILER__libs_unscanned_Debug C$:/Users/mazaf/CLionProjects/libs/main.cpp || cmake_object_order_depends_target_libs
+  DEP_FILE = CMakeFiles\libs.dir\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\libs.dir
+  OBJECT_FILE_DIR = CMakeFiles\libs.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target libs
+
+
+#############################################
+# Link the executable libs.exe
+
+build libs.exe: CXX_EXECUTABLE_LINKER__libs_Debug CMakeFiles/libs.dir/main.cpp.obj | libStaticLib.dll.a libDynamicLib.dll.a || libDynamicLib.dll libStaticLib.dll
+  FLAGS = -g
+  LINK_LIBRARIES = libStaticLib.dll.a  libDynamicLib.dll.a  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\libs.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libs.exe
+  TARGET_IMPLIB = liblibs.dll.a
+  TARGET_PDB = libs.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\mazaf\CLionProjects\lab3\cmake-build-debug && "C:\Applications\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\mazaf\CLionProjects\libs\cmake-build-debug && "C:\Applications\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -163,7 +159,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\mazaf\CLionProjects\lab3\cmake-build-debug && "C:\Applications\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\mazaf\CLionProjects\lab3 -BC:\Users\mazaf\CLionProjects\lab3\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\mazaf\CLionProjects\libs\cmake-build-debug && "C:\Applications\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\mazaf\CLionProjects\libs -BC:\Users\mazaf\CLionProjects\libs\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -173,11 +169,11 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build dynamic: phony libdynamic.a
+build DynamicLib: phony libDynamicLib.dll
 
-build lab3: phony lab3.exe
+build StaticLib: phony libStaticLib.dll
 
-build static: phony libstatic.a
+build libs: phony libs.exe
 
 # =============================================================================
 # Folder targets.
@@ -185,9 +181,9 @@ build static: phony libstatic.a
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug
+# Folder: C:/Users/mazaf/CLionProjects/libs/cmake-build-debug
 
-build all: phony libstatic.a libdynamic.a lab3.exe
+build all: phony libStaticLib.dll libDynamicLib.dll libs.exe
 
 # =============================================================================
 # Built-in targets
@@ -196,14 +192,14 @@ build all: phony libstatic.a libdynamic.a lab3.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/mazaf/CLionProjects/lab3/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/mazaf/CLionProjects/libs/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/mazaf/CLionProjects/lab3/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Applications/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Users/mazaf/CLionProjects/libs/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -1,5 +1,9 @@
 # ninja log v5
-13	843	7239089317652308	CMakeFiles/lab3.dir/dll/DynamicLib.cpp.obj	7d59a85f82dae6ad
-1	2057	7239089329798140	CMakeFiles/lab3.dir/lib/StaticLib.cpp.obj	3b28efd28761fb1f
-7	2294	7239089332158806	CMakeFiles/lab3.dir/main.cpp.obj	4a3b51a1fb3fd09e
-2294	2443	7239089333637140	lab3.exe	1c6afdb23943e714
+6	877	7241837228916524	CMakeFiles/DynamicLib.dir/dll/DynamicLib.cpp.obj	3d0c1c85b4ff52a2
+880	995	7241837230077586	libDynamicLib.dll	47a9cb726ca25161
+880	995	7241837230077586	libDynamicLib.dll.a	47a9cb726ca25161
+1	2280	7241837242962457	CMakeFiles/StaticLib.dir/lib/StaticLib.cpp.obj	668adc8cc70c4a3d
+2283	2380	7241837243923357	libStaticLib.dll	7d58eafa34643f4f
+2283	2380	7241837243923357	libStaticLib.dll.a	7d58eafa34643f4f
+12	2539	7241837245544851	CMakeFiles/libs.dir/main.cpp.obj	41b516880ba8870d
+2539	2660	7241837246718512	libs.exe	6956fa32ff05f6b5

@@ -2,6 +2,8 @@
 #include "StaticLib.h"
 #include "windows.h"
 
+#pragma comment(lib, "ws2_32.lib");
+
 int fibonacci(int num) {
     if (num == 1 || num == 2) {
         return 1;

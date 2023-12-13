@@ -149,8 +149,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug",
-		"source" : "C:/Users/mazaf/CLionProjects/lab3"
+		"build" : "C:/Users/mazaf/CLionProjects/libs/cmake-build-debug",
+		"source" : "C:/Users/mazaf/CLionProjects/libs"
 	},
 	"version" : 
 	{

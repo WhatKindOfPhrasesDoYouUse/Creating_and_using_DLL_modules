@@ -1,5 +1,5 @@
-C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug/CMakeFiles/static.dir
-C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug/CMakeFiles/dynamic.dir
-C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug/CMakeFiles/lab3.dir
-C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/mazaf/CLionProjects/libs/cmake-build-debug/CMakeFiles/StaticLib.dir
+C:/Users/mazaf/CLionProjects/libs/cmake-build-debug/CMakeFiles/DynamicLib.dir
+C:/Users/mazaf/CLionProjects/libs/cmake-build-debug/CMakeFiles/libs.dir
+C:/Users/mazaf/CLionProjects/libs/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/mazaf/CLionProjects/libs/cmake-build-debug/CMakeFiles/rebuild_cache.dir

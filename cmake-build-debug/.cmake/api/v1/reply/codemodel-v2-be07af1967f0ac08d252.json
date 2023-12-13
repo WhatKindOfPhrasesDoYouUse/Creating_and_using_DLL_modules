@@ -29,7 +29,7 @@
 					[
 						0
 					],
-					"name" : "lab3",
+					"name" : "libs",
 					"targetIndexes" : 
 					[
 						0,
@@ -42,23 +42,23 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "dynamic::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-dynamic-Debug-aeb6f34130d0327e321d.json",
-					"name" : "dynamic",
+					"id" : "DynamicLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DynamicLib-Debug-212610bdf9d10a12ac4d.json",
+					"name" : "DynamicLib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "lab3::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab3-Debug-0d0e8bcdda781e2f2bc3.json",
-					"name" : "lab3",
+					"id" : "StaticLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-StaticLib-Debug-bb0c1ef11e85bfdbfc09.json",
+					"name" : "StaticLib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "static::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-static-Debug-2c7e1642e9d418347ec0.json",
-					"name" : "static",
+					"id" : "libs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-libs-Debug-87163e3e4bb469fc2a78.json",
+					"name" : "libs",
 					"projectIndex" : 0
 				}
 			]
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/mazaf/CLionProjects/lab3/cmake-build-debug",
-		"source" : "C:/Users/mazaf/CLionProjects/lab3"
+		"build" : "C:/Users/mazaf/CLionProjects/libs/cmake-build-debug",
+		"source" : "C:/Users/mazaf/CLionProjects/libs"
 	},
 	"version" : 
 	{

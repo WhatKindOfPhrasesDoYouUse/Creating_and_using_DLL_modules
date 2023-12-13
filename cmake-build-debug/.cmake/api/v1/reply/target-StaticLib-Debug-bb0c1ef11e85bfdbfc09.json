@@ -1,9 +1,14 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "libstatic.a"
+			"path" : "libStaticLib.dll"
+		},
+		{
+			"path" : "libStaticLib.dll.a"
+		},
+		{
+			"path" : "libStaticLib.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -39,6 +44,12 @@
 					"fragment" : "-g -fdiagnostics-color=always"
 				}
 			],
+			"defines" : 
+			[
+				{
+					"define" : "StaticLib_EXPORTS"
+				}
+			],
 			"language" : "CXX",
 			"languageStandard" : 
 			{
@@ -54,9 +65,24 @@
 			]
 		}
 	],
-	"id" : "static::@6890427a1f51a3e7e1df",
-	"name" : "static",
-	"nameOnDisk" : "libstatic.a",
+	"id" : "StaticLib::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "StaticLib",
+	"nameOnDisk" : "libStaticLib.dll",
 	"paths" : 
 	{
 		"build" : ".",
@@ -93,5 +119,5 @@
 			"sourceGroupIndex" : 1
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "SHARED_LIBRARY"
 }
